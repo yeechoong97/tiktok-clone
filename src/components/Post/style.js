@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     description: {
-        color: '#C4C4C4',
+        color: '#fff',
         fontSize: 14,
         fontWeight: '300',
         marginBottom: 10,
@@ -72,7 +72,10 @@ const styles = StyleSheet.create({
     iconContainer: {
         alignItems: 'center',
         fontSize: 16,
-        fontWeight: '500'
+        fontWeight: '500',
+    },
+    redHeart: {
+        color: 'red',
     }
 
 });
