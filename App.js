@@ -5,17 +5,16 @@ import {
 } from 'react-native';
 
 import Home from './src/screens/Home';
-import { NavigationContainer } from '@react-navigation/native';
+import 'react-native-gesture-handler';
+import RootNavigation from './src/navigation';
 
 const App = () => {
     return (
         <>
-            <NavigationContainer>
-                <StatusBar barStyle='dark-content' />
-                <SafeAreaView>
-                    <Home />
-                </SafeAreaView>
-            </NavigationContainer>
+            <StatusBar barStyle='light-content' />
+            <SafeAreaView style={{ flex: 1 }}>
+                <RootNavigation />
+            </SafeAreaView>
         </>
     );
 };
