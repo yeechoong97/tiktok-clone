@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Image, Text, TouchableOpacity, TouchableWithoutFeedback, View } from 'react-native'
 import Video from 'react-native-video'
 import styles from './style'
@@ -7,9 +7,9 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
-const Post = ({ post }) => {
+const Post = ({ post, currentID }) => {
 
-    const [paused, setPaused] = useState(false);
+    const [paused, setPaused] = useState(true);
     const [videoPost, setVideoPost] = useState(post);
     const [isLiked, setIsLiked] = useState(false);
 
@@ -26,10 +26,16 @@ const Post = ({ post }) => {
         setIsLiked(!isLiked);
     }
 
+    useEffect(() => {
+        setPaused(videoPost.id !== currentID);
+    }, [currentID])
+
+
     return (
         <View style={styles.container}>
             <TouchableWithoutFeedback onPress={onPlayPausePress}>
                 <View>
+                    {/* requires a state to check the pause video to resume after swipe */}
                     <Video
                         source={{ uri: `${post.videoUri}` }}
                         style={styles.video}

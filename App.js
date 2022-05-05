@@ -5,14 +5,17 @@ import {
 } from 'react-native';
 
 import Home from './src/screens/Home';
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
     return (
         <>
-            <StatusBar barStyle='dark-content' />
-            <SafeAreaView>
-                <Home />
-            </SafeAreaView>
+            <NavigationContainer>
+                <StatusBar barStyle='dark-content' />
+                <SafeAreaView>
+                    <Home />
+                </SafeAreaView>
+            </NavigationContainer>
         </>
     );
 };
