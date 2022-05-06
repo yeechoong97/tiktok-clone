@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react'
-import { Text, View, FlatList, Dimensions } from 'react-native'
+import { View, FlatList, Dimensions } from 'react-native'
 import Post from '../../components/Post'
 import posts from '../../../data/post';
 

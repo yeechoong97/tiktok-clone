@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     },
     uiContainer: {
         height: '100%',
-        paddingBottom: 24,
+        paddingBottom: 0,
         justifyContent: 'flex-end',
     },
     bottomContainer: {
