@@ -19,7 +19,7 @@ const Home = () => {
                 data={posts}
                 renderItem={({ item }) => <Post post={item} currentID={currentVideoID} />}
                 showsVerticalScrollIndicator={false}
-                snapToInterval={Dimensions.get('window').height}
+                snapToInterval={Dimensions.get('window').height - 75}
                 snapToAlignment={'end'}
                 decelerationRate={'fast'}
                 onViewableItemsChanged={_onViewableItemsChanged}

@@ -7,6 +7,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
+
 const Post = ({ post, currentID }) => {
 
     const [paused, setPaused] = useState(true);
@@ -32,10 +33,9 @@ const Post = ({ post, currentID }) => {
 
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container]}>
             <TouchableWithoutFeedback onPress={onPlayPausePress}>
                 <View>
-                    {/* requires a state to check the pause video to resume after swipe */}
                     <Video
                         source={{ uri: `${post.videoUri}` }}
                         style={styles.video}
