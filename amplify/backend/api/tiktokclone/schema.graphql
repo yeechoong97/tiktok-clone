@@ -15,9 +15,9 @@ type Post @model {
   videoUri: String!
   description: String!
   userID: ID!
-  user: User @belongsTo
+  user: User @belongsTo(fields: ["userID"])
   songID: ID!
-  song: Song @hasOne
+  song: Song @hasOne(fields: ["songID"])
 }
 
 type Song @model {

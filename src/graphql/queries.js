@@ -17,7 +17,6 @@ export const getUser = /* GraphQL */ `
           createdAt
           updatedAt
           userPostsId
-          postSongId
         }
         nextToken
       }
@@ -75,7 +74,6 @@ export const getPost = /* GraphQL */ `
       createdAt
       updatedAt
       userPostsId
-      postSongId
     }
   }
 `;
@@ -109,7 +107,6 @@ export const listPosts = /* GraphQL */ `
         createdAt
         updatedAt
         userPostsId
-        postSongId
       }
       nextToken
     }

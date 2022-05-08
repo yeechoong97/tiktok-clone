@@ -17,7 +17,6 @@ export const onCreateUser = /* GraphQL */ `
           createdAt
           updatedAt
           userPostsId
-          postSongId
         }
         nextToken
       }
@@ -42,7 +41,6 @@ export const onUpdateUser = /* GraphQL */ `
           createdAt
           updatedAt
           userPostsId
-          postSongId
         }
         nextToken
       }
@@ -67,7 +65,6 @@ export const onDeleteUser = /* GraphQL */ `
           createdAt
           updatedAt
           userPostsId
-          postSongId
         }
         nextToken
       }
@@ -104,7 +101,6 @@ export const onCreatePost = /* GraphQL */ `
       createdAt
       updatedAt
       userPostsId
-      postSongId
     }
   }
 `;
@@ -136,7 +132,6 @@ export const onUpdatePost = /* GraphQL */ `
       createdAt
       updatedAt
       userPostsId
-      postSongId
     }
   }
 `;
@@ -168,7 +163,6 @@ export const onDeletePost = /* GraphQL */ `
       createdAt
       updatedAt
       userPostsId
-      postSongId
     }
   }
 `;
