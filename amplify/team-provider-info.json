@@ -10,6 +10,11 @@
       "StackName": "amplify-tiktokclone-dev-124546",
       "StackId": "arn:aws:cloudformation:ap-southeast-1:350177782485:stack/amplify-tiktokclone-dev-124546/902e2180-cdc0-11ec-bef0-0a32792e90a8",
       "AmplifyAppId": "d3vq6pm3ax7p51"
+    },
+    "categories": {
+      "auth": {
+        "tiktokclone65b7082a": {}
+      }
     }
   }
 }

@@ -1,13 +1,12 @@
 import React from 'react';
 import {
-    SafeAreaView,
     StatusBar,
 } from 'react-native';
 
-import Home from './src/screens/Home';
 import 'react-native-gesture-handler';
 import RootNavigation from './src/navigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { withAuthenticator } from 'aws-amplify-react-native';
 
 const App = () => {
     return (
@@ -20,6 +19,4 @@ const App = () => {
     );
 };
 
-
-
-export default App;
+export default withAuthenticator(App);
