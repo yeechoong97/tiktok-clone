@@ -23,10 +23,9 @@ const Home = () => {
             try {
                 const response = await API.graphql(graphqlOperation(listPosts));
                 setPosts(response.data.listPosts.items);
-                console.log(response.data.listPosts.items);
             }
             catch (error) {
-
+                console.log(error)
             }
         }
 

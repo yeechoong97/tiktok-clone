@@ -42,11 +42,12 @@ const Post = ({ post, currentID }) => {
                         resizeMode={'cover'}
                         repeat={true}
                         paused={paused}
+                        volume={0.3}
                     />
                     <View style={styles.uiContainer}>
 
                         <View style={styles.rightContainer}>
-                            <Image style={styles.profilePicture} source={{ uri: `${post.user.profileUri}` }} />
+                            <Image style={styles.profilePicture} source={{ uri: `${post.user.imageUri}` }} />
                             <TouchableOpacity activeOpacity={0.5} onPress={updateLike}>
                                 <View style={styles.iconContainer}>
                                     <AntDesign name={'heart'} size={35} color={`${isLiked ? "red" : "white"}`} />
