@@ -1,7 +1,6 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import Home from '../screens/Home';
-import Upload from '../screens/Upload';
 import Inbox from '../screens/Inbox';
 import Profile from '../screens/Profile';
 import Search from '../screens/Search';
@@ -10,6 +9,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { Image } from 'react-native';
 import plusIcon from '../assets/images/plus-icon.png';
+import CameraUpload from '../screens/Camera';
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -40,7 +40,7 @@ const HomeBottomTabNavigator = () => {
             />
             <Tab.Screen
                 name={"Upload"}
-                component={Upload}
+                component={CameraUpload}
                 options={{
                     tabBarIcon: () => (<Image source={plusIcon} style={{ height: 35, resizeMode: 'contain' }} />),
                     tabBarLabel: null

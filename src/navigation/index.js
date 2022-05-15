@@ -2,6 +2,7 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeBottomTabNavigator from './homeBottomTabNavigator';
+import CreatePost from '../screens/CreatePost';
 
 const RootNavigation = () => {
 
@@ -11,6 +12,7 @@ const RootNavigation = () => {
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
                 <Stack.Screen name="HomeBottomTabNavigator" component={HomeBottomTabNavigator} />
+                <Stack.Screen name="CreatePost" component={CreatePost} />
             </Stack.Navigator>
         </NavigationContainer>
     )
