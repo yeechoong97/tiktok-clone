@@ -2,12 +2,14 @@ import React, { useState, useRef } from 'react'
 import { RNCamera } from 'react-native-camera'
 import { View, TouchableOpacity } from 'react-native'
 import styles from './style'
+import { useNavigation } from '@react-navigation/native'
 
 
 const CameraUpload = () => {
 
     const [isRecording, setIsRecording] = useState(false);
     const camera = useRef();
+    const navigation = useNavigation();
 
     const onRecord = async () => {
         if (isRecording) {
@@ -16,7 +18,7 @@ const CameraUpload = () => {
         }
         else {
             const data = await camera.current.recordAsync();
-            console.log(data);
+            navigation.navigate("CreatePost", { videoUri: data.uri })
         }
     }
 
