@@ -1,0 +1,16 @@
+{
+  "resourceName": "tiktokclone",
+  "policyUUID": "e86a90ca",
+  "bucketName": "tiktokclone311c13dd3d834525a274c0073bab9906",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

@@ -6,6 +6,7 @@ import Entypo from 'react-native-vector-icons/Entypo';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Fontisto from 'react-native-vector-icons/Fontisto';
+import { Storage } from 'aws-amplify';
 
 
 const Post = ({ post, currentID }) => {
@@ -13,6 +14,7 @@ const Post = ({ post, currentID }) => {
     const [paused, setPaused] = useState(true);
     const [videoPost, setVideoPost] = useState(post);
     const [isLiked, setIsLiked] = useState(false);
+    const [videoUri, setVideoUri] = useState(null);
 
     const onPlayPausePress = () => {
         setPaused(!paused);
@@ -27,8 +29,17 @@ const Post = ({ post, currentID }) => {
         setIsLiked(!isLiked);
     }
 
+    const getVideoUri = async () => {
+        if (post.videoUri.startsWith("http")) {
+            setVideoUri(post.videoUri);
+        }
+
+        setVideoUri(await Storage.get(post.videoUri));
+    }
+
     useEffect(() => {
         setPaused(videoPost.id !== currentID);
+        getVideoUri();
     }, [currentID])
 
 
@@ -37,7 +48,7 @@ const Post = ({ post, currentID }) => {
             <TouchableWithoutFeedback onPress={onPlayPausePress}>
                 <View>
                     <Video
-                        source={{ uri: `${post.videoUri}` }}
+                        source={{ uri: `${videoUri}` }}
                         style={styles.video}
                         resizeMode={'cover'}
                         repeat={true}
